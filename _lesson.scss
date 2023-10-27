@@ -1,0 +1,141 @@
+/*========================================
+lesson.scss
+========================================*/
+.p-lesson {
+&__index {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+@include mq($breakpoint:sm) {
+	display: initial;
+	 width: 100%;
+ }
+}
+&__index-img {
+  width: 600px;
+  height: 350px;
+@include mq(){
+  width: 65%;
+  height: auto;
+}
+@include mq($breakpoint:sm) {
+  margin: initial;
+  width: 88%;
+  height: 250px;
+  margin-left: 24px;
+  margin-top: 30px;
+  }
+}
+&__index-list {
+  font-size: $font-size_xl;
+  line-height: 30px;
+  margin: 100px 0 0 25px;
+@include mq() {
+   font-size: $font-size_default;
+   line-height: 20px;
+   width: 145px;
+ }
+@include mq($breakpoint:sm) {
+   margin: initial;
+   margin-top: 30px;
+   width: initial;
+   text-align: center;
+  }
+ }
+&__contents {
+	width: 90%;
+  display: flex;
+  justify-content: center;
+@include mq(){
+  width: 97%;
+ }
+@include mq($breakpoint:sm) {
+  display: initial;
+ }
+}
+&__about-img{
+  width: 500px;
+  height: 300px;
+  margin: 100px 10px 0 50px;
+@include mq(){
+  width: 290px;
+  height: 210px;
+  margin: 200px 0 0 25px;
+  }
+@include mq($breakpoint:sm) {
+  margin: 30px 0 -20px 50px;
+  }
+}
+&__schedule-img{
+  width: 450px;
+  height: 300px;
+  margin-top: 100px;
+@include mq(){
+  width: 300px;
+  height: 210px;
+  margin: 150px 55px 0 -50px;
+  }
+@include mq($breakpoint:sm) {
+  display:none;
+  }
+}
+&__about,
+&__schedule{
+ line-height: 40px;
+ font-size: 16px;
+ font-family: YuMincho;
+ margin:0 30px;
+ @include mq(){
+    margin: initial;
+    margin-right:  20px;
+   }
+ @include mq($breakpoint:sm) {
+    width: 90%;
+    margin:25px;
+  }
+ }
+&__schedule {
+  margin: 40px;
+@include mq($breakpoint:sm) {
+  margin: 20px;
+ }
+}
+&__about > h1,&__about > h2,
+&__schedule > h1,&__schedule > h2 {
+	padding: 10px;
+  font-size: $font-size_xl;
+}
+@include mq(){
+&__about > h2 {
+   font-size: $font-size_default;
+   text-align: center;
+  }
+}
+@include mq(){
+&__schedule > h2{
+   font-size: $font-size_default;
+  }
+}
+@include mq($breakpoint:sm) {
+&__schedule > h2{
+   font-size: $font-size_default;
+   text-align: center;
+  }
+}
+@include mq($breakpoint:sm) {
+&__schedule > p{
+   text-align: center;
+  }
+}
+&__next {
+  margin:-20px 0 20px -30px;
+  @include mq(){
+  font-size: $font-size_s;
+  width: 400px;
+  }
+}
+&__next > p{
+  width: 360px;
+  text-align: center;
+ }
+}
