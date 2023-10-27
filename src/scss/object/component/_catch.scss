@@ -1,0 +1,28 @@
+/* catchbutton */
+.c-catch {
+  margin-top: 40px;
+  margin-right:15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq(){
+    font-size: $font-size_s;
+    }
+&::before  {
+  border-top: 1px solid;
+  content: "";
+  width: 3em;
+  margin-right: 1em;
+}
+a{
+  transition: all .3s ease-out;
+}
+a:hover {
+  transform: translateX(10px) translateY(-10px);
+  color: white;
+  background: navy;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size:$font-size_default;
+ }
+}

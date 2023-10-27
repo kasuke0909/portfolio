@@ -1,0 +1,45 @@
+/*========================================
+badge.scss
+========================================*/
+
+.u-badge {
+/*1. pink */
+&__color1 {
+  background: #fac3ea;
+}
+/*2. blue */
+&__color2 {
+  background: #7acee6;
+}
+/*3. orange */
+&__color3 {
+  background: #f2af29;
+}
+/*4. skyblue */
+&__color4 {
+  background: #b4f6fa;
+}
+/*5. lightorange */
+&__color5 {
+  background: #fcb756;
+}
+/*6. lightgreen */
+&__color6 {
+  background: #7efa6b;
+}
+/*7. yellow */
+&__color7 {
+  background: #fcfa53;
+ }
+}
+/* ===============================画面アニメーション処理 =========================*/
+.u-fade-type-up{
+    transform: translateY(50px);
+    opacity: 0;
+}
+/* トリガー発火でis-activeを付与 */
+.u-fade-type-up.is-active{
+    transition: .6s;
+    transform: translateY(0);
+    opacity: 1;
+}

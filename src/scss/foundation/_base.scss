@@ -1,0 +1,14 @@
+/* _base.scss  */
+a,
+a:active,
+a:focus {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+html, body {
+	width: 100%;
+}
+header, main, footer,section {
+  max-width: $site-width;
+	margin: 0 auto;
+}

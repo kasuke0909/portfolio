@@ -1,0 +1,35 @@
+/* button */
+.c-button {
+&__SNS {
+  width: 33px;
+  height: 33px;
+  padding: 20px;
+}
+&__SNS:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+&__submit {
+  float:right;
+  margin-right: 200px;
+  background-color: #ffbd80;
+  color: #fff;
+  font-size:$font-size_l;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  transition: all .3s ease-out;
+  @include mq(){
+   font-size: $font-size_default;
+   width: 80px;
+   height: 30px;
+   margin: -15px 0 0 110px;
+    }
+  }
+&__submit:hover {
+  transform: translateX(5px) translateY(-5px);
+  color: #000;
+  font-size: $font-size_l;
+ }
+}

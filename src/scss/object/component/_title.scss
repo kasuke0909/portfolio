@@ -1,0 +1,20 @@
+
+/* title */
+.c-title {
+  margin-bottom: 30px;
+  line-height: 30px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  @include mq(){
+    display: none;
+   }
+&::before {
+  border-top: 1px solid;
+  content: "";
+  width: 3em;
+  margin-right: 1em;
+  margin-left: -20px;
+ }
+}

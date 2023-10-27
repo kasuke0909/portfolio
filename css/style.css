@@ -1,1235 +1,435 @@
 @charset "UTF-8";
-/* reset.css済み */
-/* Foundation */
-/*========================================
-  リンク
-========================================*/
+/* ==========================Foundation=================== */
+/* _reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* _base.scss  */
 a,
 a:active,
 a:focus {
   color: #2b2b2b;
-  text-decoration: none;
-}
+  text-decoration: none; }
+
 html, body {
+  width: 100%; }
+
+header, main, footer, section {
+  max-width: 1366px;
+  margin: 0 auto; }
+
+/*========================================
+  footer.scss
+========================================*/
+.l-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px; }
+
+/*========================================
+  header.scss
+========================================*/
+.l-header {
   width: 100%;
-}
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 750px) {
+    .l-header {
+      width: 55%; } }
+  @media screen and (max-width: 414px) {
+    .l-header {
+      width: 30%; } }
+
 /*========================================
-  PCコンテンツ幅
+l-wrapper.scss
 ========================================*/
-header {
-  max-width: 1366px;
-  margin: 0 auto;
-}
-footer {
-  max-width: 1366px;
-  margin: 0 auto;
-  }
-main {
-  max-width: 1366px;
-  margin: 0 auto;
-}
-/*========================================
-  背景画像設定
-========================================*/
-.l-wrapper {
+.l-wrapper-1 {
   background-image: url("../img/all_bg_img01.png");
   background-size: cover;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 750px) {
-.l-wrapper {
-  background-size: 100%;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-wrapper {
-  background-size: 100% 100%;
-  }
-}
-.l-wrapper2 {
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 750px) {
+    .l-wrapper-1 {
+      background-size: 100%; } }
+  @media screen and (max-width: 414px) {
+    .l-wrapper-1 {
+      background-size: 100% 100%; } }
+
+.l-wrapper-2 {
   background-image: url("../img/all_bg_img01.png");
   background-size: cover;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 750px) {
-.l-wrapper2 {
-  background-size: 100%;
-  }
-}
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 750px) {
+    .l-wrapper-2 {
+      background-size: 100%; } }
 
-/*========================================
-  各layout
-========================================*/
-/* *********************ヘッダー設定******************** */
-.l-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-@media screen and (max-width: 750px) {
-.l-header {
-  width: 55%;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-header {
-  width: 30%;
-  margin: 0;
-  }
-}
-.l-header__lang {
-  font-size: 14px;
-  text-align: right;
-  margin: 110px 110px 0 0;
-}
-@media screen and (max-width: 750px) {
-.l-header__lang {
-  margin-left: 100px;
-  margin-top: 130px;
-  }
-}
-.l-header__logo {
-  width: 150px;
-  height: auto;
-  margin: 50px 0 0 50px;
-  border-radius: 100px;
-}
-@media screen and (max-width: 750px) {
-.l-header__logo {
-  margin: 50px 0 0 0px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-header__logo {
-  margin: 50px 0 0 30px;
-  width: 100px;
-  height: auto;
-  }
-}
-.l-headernav {
-  width: 400px;
-  display:flex;
-  justify-content: space-between;
-  margin-top :110px;
-}
-@media screen and (max-width: 750px) {
-.l-headernav {
-  display: none;
-  }
-}
-/* *********************メインコンテンツ設定******************** */
-/* index */
-.l-maintitle {
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  font-family: YuMincho;
-  margin-top: -50px;
-  margin-bottom: 60px;
-}
-@media screen and (max-width: 750px) {
-.l-maintitle {
-  width: 100%;
-  margin-top: 30px;
-  text-align: center;
-  }
-}
-.l-main1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-@media screen and (max-width: 750px) {
-.l-main1 {
- width: 100%;
-  }
-}
-.l-mainnav {
-  writing-mode: vertical-rl;
-  margin: 70px 40px 0 0;
-  line-height: 45px;
-  font-family: Yumincho;
-  font-size: 20px;
-  letter-spacing: 7px;
-}
-@media screen and (max-width: 750px) {
-.l-mainnav {
-  display: none;
-  }
-}
-.l-main2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.l-wrapper-3 {
+  background-image: url("../img/all_bg_img01.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 540px) {
+    .l-wrapper-3 {
+      background-size: 100% 100%; } }
 
-}
-@media screen and (max-width: 750px) {
-.l-main2 {
-  width: 100%;
-  display: initial;
-
- }
-}
-@media screen and (max-width: 414px) {
-.l-main2 {
-  width: 100%;
-  font-size: 15px;
- }
-}
-.l-main2__explain {
-  margin: -30px 0 140px 180px;
-  font-size: 20px;
-  line-height: 45px;
-}
-@media screen and (max-width: 750px) {
-.l-main2__explain {
-  margin: initial;
-  font-size: 16px;
-  text-align: center;
-  display: block;
-  margin-top: -20px;
-  margin-bottom: 10px;
- }
-}
-@media screen and (max-width: 750px) {
-.l-main2__explain > p{
-  text-align: left;
-	display: inline-block;
-  line-height: 40px;
- }
-}
-@media screen and (max-width: 750px) {
-.l-main2__explain > p{
-  font-size: 14px;
- }
-}
-.l-main2__explain > h2{
-  font-weight: bold;
-  text-align: center;
-}
-.l-main2__concept {
-  margin: -30px 150px 140px 0;
-  font-size: 20px;
-  line-height: 45px;
-}
-@media screen and (max-width: 750px) {
-.l-main2__concept {
-  margin: initial;
-  font-size: 16px;
-  text-align: center;
-  display: block;
-  margin-bottom: 20px;
- }
-}
-.l-main2__concept > h3{
-  font-weight: bold;
-  text-align: center;
-}
-@media screen and (max-width: 750px) {
-.l-main2__concept > ul{
-  text-align: left;
-	display: inline-block;
-  line-height: 40px;
- }
-}
-@media screen and (max-width: 414px) {
-.l-main2__concept > ul{
-  font-size: 14px;
- }
-}
-/* ========================================================= */
-.l-info,
-.l-recipe,
-.l-contact,
-.l-profile,
- {
-  width: 100%;
-}
-.l-info__title,
-.l-profile__title,
-.l-hobby__title,
-.l-lesson__title,
-.l-recipedetail__title,
-.l-contact__title {
-  margin-bottom: 30px;
-  line-height: 30px;
-}
-.l-info__title,
-.l-recipe__title,
-.l-profile__title,
-.l-hobby__title,
-.l-lesson__title,
-.l-recipedetail__title,
-.l-contact__title{
-  margin-left: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-/* *******タイトル横線******* */
-.l-info__title:before,
-.l-recipe__title:before,
-.l-profile__title:before,
-.l-hobby__title:before,
-.l-lesson__title:before,
-.l-recipedetail__title:before,
-.l-contact__title:before {
-  border-top: 1px solid;
-  content: "";
-  width: 3em;
-}
-.l-info__title:before,
-.l-recipe__title:before,
-.l-profile__title:before,
-.l-hobby__title:before,
-.l-lesson__title:before,
-.l-recipedetail__title:before,
-.l-contact__title:before  {
-  margin-right: 1em;
-  margin-left: -20px;
-}
-/* ***************************** */
-@media screen and (max-width: 750px) {
-.l-info__title,
-.l-profile__title,
-.l-lesson__title,
-.l-recipedetail__title,
-.l-recipe__title,
-.l-hobby__title {
-  font-size: 16px;
-  margin-left: 0;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-contact__title,
-.l-profile__title,
-.l-recipedetail__title,
-.l-lesson__title {
-  display: none;
- }
-}
-.l-info__contents {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  line-height: 30px;
-  width: 60%;
-  border-bottom: 2px dashed #ffbd80;
-  margin: 40px auto;
-}
-@media screen and (max-width: 750px) {
-.l-info__contents{
-  font-size: 14px;
-  width: 90%;
-  margin: 0 0 0px 40px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-info__contents {
-  margin: 0 0 0px 20px;
-  }
-}
-/* ******************************** */
-.l-profile {
-  display: flex;
-  justify-content: space-around;
-  width:98%;
-}
-@media screen and (max-width: 414px) {
-.l-profile {
-  display: initial;
-  text-align: center;
- }
-}
-.l-profile__contents {
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 414px) {
-.l-profile__contents {
-  margin: 30px 0;
- }
-}
-.l-profile__contents > p{
-  border-bottom: 1px solid;
-  line-height: 50px;
-  width: 50%;
-  text-align:left;
-  margin: 0 auto;
-}
-@media screen and (max-width: 414px) {
-.l-profile__contents > p {
-  font-size: 14px;
-  line-height: 30px;
-  margin: 30px auto;
-  width: 87%;
- }
-}
-.l-profile__skillandlicense {
-  line-height: 30px;
-}
-@media screen and (max-width: 750px) {
-.l-profile__skillandlicense {
-  font-size: 14px;
- }
-}
-.l-profile__name > p {
-  font-size: 15px;
-}
-.l-profile__name > h1 {
-  font-size: 25px;
-}
-@media screen and (max-width: 750px) {
-.l-profile__name > h1 {
-  font-size: 20px;
- }
-}
-.l-profile__license {
-  margin: 30px 0 30px 0
-}
-.l-hobby {
-    width: 100%;
-}
-.l-hobbyimg__ex {
-  margin-top: -30px;
-}
-.l-hobbyimg, .l-hobbyimg__ex{
-  display: flex;
-  justify-content: space-around;
-  margin:20px 50px 50px 30px;
-}
-@media screen and (max-width: 750px) {
-.l-hobbyimg {
-  margin:0 20px 0 20px;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-recipeimg {
-  width: 50%;
-  margin:0 20px 0 30px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-hobbyimg {
-  display: initial;
-  text-align: center;
-  margin: 20px 0;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-hobbyimg__ex {
-  display: none
- }
-}
-/* ******************************************** */
-.l-recipe__title {
-  margin-bottom: 30px;
-  line-height: 30px;
-}
-.l-recipe__contents{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-}
-.l-recipedetail__sidebar {
-  width: 100%;
-  line-height: 40px;
-  margin: -100px 0 100px 0;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__sidebar {
-  margin-top: 40px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__sidebar {
-  margin: initial;
-  }
-}
-.l-recipedetail__sidebar > li {
-  border-bottom: 1px solid;
-  width: 600px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__sidebar > li {
-  font-size: 14px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__sidebar > li {
-  font-size: 10px;
-  }
-}
-.l-recipedetail__contents {
-  display: flex;
-  justify-content: space-around;
-  line-height: 35px;
-}
-.l-recipedetail__materialandnutrition {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-right: 130px;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__materialandnutrition {
-  margin: initial;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__materialandnutrition {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin-left: 40px;
-  }
-}
-.l-recipedetail__material {
-  margin-right: 50px;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__contents {
-  margin: 30px 30px 0 30px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__contents {
-  display: initial;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__contents > h3, p{
-  font-size: 14px;
-  line-height: 30px;
-  }
-}
-
-.l-recipedetail__point {
-  width: 35%;
-  margin-left: 50px;
-}
-@media screen and (max-width: 750px) {
-  .l-recipedetail__method {
-    width: 43%;
-  }
-}
-@media screen and (max-width: 414px) {
-  .l-recipedetail__method {
-    width: 51%;
-  }
-}
-@media screen and (max-width: 750px) {
-  .l-recipedetail__point {
-    margin:initial;
-    width: 40%;
-  }
-}
-.l-recipedetail__method > h5{
-  font-size: 20px;
-}
-.l-recipedetail__point > h6{
-  font-size: 20px;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__method > h5 {
-  font-size: 14px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__method > h5 {
-  font-size: 14px;
-  text-align: center;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__point > h6 {
-  font-size: 14px;
-  text-align: center;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__point > h6 {
-  font-size: 14px;
-  }
-}
-.l-recipedetail__methodandpoint {
-  display: flex;
-  justify-content: space-around;
-  line-height: 40px;
-  margin: 20px 150px;
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__methodandpoint {
-  margin: initial;
-  font-size: 14px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__methodandpoint {
-  width: 86%;
-  margin: -30px 30px 30px 30px;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-recipedetail__method  > li {
-  font-size: 14px;
-  line-height: 30px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__method {
-  font-size: 12px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-recipedetail__point > p{
-  font-size: 12px;
-  }
-}
-/* ********************************************** */
-.l-lesson__contents {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  }
-}
-.l-lesson__contents h1{
-  font-size: 20px;
-  text-align: center;
-  margin-top: -20px;
-  margin-bottom: 30px;
-}
-.l-lesson__contents p{
-  line-height: 30px;
-  margin:10px 0 10px 45px;
-  width: 450px;
-}
-@media screen and (max-width: 750px) {
-.l-lesson__contents {
-   font-size: 14px;
-   width: 100%;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-lesson__contents {
-   display: initial;
-   width: 100%;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-lesson__contents p{
-  width: 300px;
-  }
-}
-.l-lesson__article {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width: 414px) {
-.l-lesson__article{
-  display: initial;
-  }
-}
-.l-lesson__list {
-  font-size: 20px;
-  line-height: 30px;
-  margin: 100px 0 0 25px;
-}
-@media screen and (max-width: 750px) {
-.l-lesson__list {
-   font-size: 16px;
-   line-height: 20px;
-   width: 145px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-lesson__list {
-   margin: initial;
-   margin-top: 30px;
-   width: initial;
-   text-align: center;
-  }
-}
-.l-lesson__ex1,
-.l-lesson__ex2 {
- width: 600px;
- line-height: 40px;
- font-size: 16px;
- font-family: YuMincho;
- margin:0 30px;
-}
-@media screen and (max-width: 750px) {
-.l-lesson__ex1,
-.l-lesson__ex2 {
-   margin: initial;
-   margin-right:  20px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-lesson__ex1,
-.l-lesson__ex2 {
-   width: 90%;
-   margin:25px;
-  }
-}
-.l-lesson__ex1 > h1,h2 {
-  padding: 10px;
-  font-size: 20px;
-}
-@media screen and (max-width: 750px) {
-.l-lesson__ex1 > h2 {
-   font-size: 16px;
-   text-align: center;
-  }
-}
-@media screen and (max-width: 750px) {
-.l-lesson__ex2 > h2{
-   font-size: 16px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-lesson__ex2 > h2{
-   font-size: 16px;
-   text-align: center;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-lesson__ex2 > p{
-   text-align: center;
-  }
-}
-.l-lesson__ex2 > h1,h2 {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.l-lesson__next {
-  margin:-20px 0 20px -30px;
-}
-.l-lesson__next > p{
-  width: 600px;
-}
-@media screen and (max-width: 750px) {
-.l-lesson__next{
-  font-size: 12px;
-  width: 400px;
-  }
-}
-
-/* ****************************************************/
-.l-contact {
-  text-align: center;
-}
-@media screen and (max-width: 750px) {
-.l-contact {
-   width: 100%;
-  }
-}
-.l-contact > h2{
-  font-size: 20px;
-  margin: 30px auto;
-  border-bottom: 1px solid;
-  width: 40%
-}
-@media screen and (max-width: 414px) {
-.l-contact > h2 {
-   font-size: 14px;
-  }
-}
-.l-contact__form {
-  width: 80%;
-  margin: 0 auto;
-}
-.l-contact__input {
-  font-size: 16px;
-  display: block;
-  margin: 20px auto;
-  height: 50px;
-  width: 60%;
-  border: 3px solid #f6f5f4;
-  border-radius: 4px;
-  outline: none;
-}
-@media screen and (max-width: 750px) {
-.l-contact__input {
-   font-size: 12px;
-   width: 80%;
-  }
-}
-.l-contact__text {
-  font-size: 16px;
-  display: block;
-  margin: 20px auto;
-  height: 150px;
-  width: 60%;
-  border: 3px solid #f6f5f4;
-  border-radius: 4px;
-  outline: none;
-}
-@media screen and (max-width: 750px) {
-.l-contact__text {
-   font-size: 12px;
-   width: 80%;
-  }
-}
-/* ****************************************** */
-/* フッター*/
-.l-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 80px;
-}
-@media screen and (max-width: 750px) {
-.l-footer {
-  width: 100%;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-footer {
-
-  }
-}
-.l-footer__nav {
-  margin-left: 100px;
-  line-height: 35px;
-}
-@media screen and (max-width: 750px) {
-.l-footer__nav {
-    display: none;
-  }
-}
-.l-footer__copyright {
-  margin-right: 100px;
-}
-@media screen and (max-width: 750px) {
-.l-footer__copyright {
-  margin-top: -60px;
-  margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 414px) {
-.l-footer__copyright {
-  margin: 0 40px 20px  0;
-  }
-}
-.l-button__SNS {
-  display: flex;
-  margin-top: 40px;
-}
-@media screen and (max-width: 750px) {
-.l-button__SNS {
-  margin: -60px 0 0 100px;
-}
-}
-@media screen and (max-width: 414px) {
-.l-button__SNS {
-  margin: 0 0 20px 40px;
-}
-}
-/* Object */
-
-/*========================================
-  各component
-========================================*/
-.c-main2__bnrimg {
-  width: 420px;
-  height: 260px;
-  margin: -100px 0px 0px 180px;
-}
-.c-profile__bnrimg {
-  width: 600px;
-  height: 350px;
-  margin:-80px 0 80px 250px;
-}
-@media screen and (max-width: 750px) {
-.c-profile__bnrimg {
-  width: 400px;
-  height: 250px;
-  margin: initial;
-  margin:50px 0 0 20px;
-  }
-}
-@media screen and (max-width: 414px) {
-.c-profile__bnrimg {
-  width: 90%;
-  margin: 30px 0;
-  }
-}
-.c-contact__bnrimg {
-  width: 800px;
-  height: 400px;
-}
-@media screen and (max-width: 750px) {
-.c-contact__bnrimg {
-  width: 90%;
-  height: 350px;
-  }
-}
-@media screen and (max-width: 414px) {
-.c-contact__bnrimg {
-  height: 250px;
-  margin-top: 30px;
-  }
-}
-.c-lesson__bnrimg {
-  width: 600px;
-  height: 350px;
-}
-@media screen and (max-width: 750px) {
-.c-lesson__bnrimg  {
-  width: 480px;
-  height: 280px;
-  }
-}
-@media screen and (max-width: 414px) {
-.c-lesson__bnrimg  {
-   margin: initial;
-   width: 88%;
-   height: 250px;
-   margin-left: 24px;
-   margin-top: 30px;
-  }
-}
-.c-info__img{
-  width: 310px;
-  height: 120px;
-  margin-top: -30px;
-  border-radius: 10%;
-}
-@media screen and (max-width: 750px) {
-.c-info__img{
-  width: 260px;
-  height: 100px;
-  margin-top: 10px;
-  }
-}
-@media screen and (max-width: 414px) {
-.c-info__img{
-  display: none;
-  }
-}
-.c-recipe__img {
-  width: 350px;
-  height: 250px;
-  margin:20px 30px 50px 40px;
-  border-radius: 10%;
-}
-@media screen and (max-width: 750px) {
-.c-recipe__img {
-  width: 300px;
-  margin: 20px;
-  }
-}
-.c-recipedetail__img {
-  width: 380px;
-  height: 240px;
-}
-@media screen and (max-width: 750px) {
-.c-recipedetail__img {
-  width: 340px;
-  height: 220px;
-  margin: auto 30px;
-  }
-}
-.c-indexname {
-  font-size: 25px
-}
-/* project */
-.c-catch {
-  margin-top: 40px;
-  margin-right:15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media screen and (max-width: 750px) {
-.c-catch {
-  font-size: 12px;
-  }
-}
-.c-catch:before  {
-  border-top: 1px solid;
-  content: "";
-  width: 3em;
-}
-.c-catch:before {
-  margin-right: 1em;
-}
-.c-hobbyimg {
-  width: 400px;
-  height: 300px;
-}
-@media screen and (max-width: 750px) {
-.c-hobbyimg {
-  width: 210px;
-  height: 150px;
-  margin: 0 10px;
-  }
-}
-@media screen and (max-width: 414px) {
-.c-hobbyimg {
-  width: 280px;
-  height: 180px;
-  margin: 20px 20px;
-  }
-}
-.c-lesson__img1{
-  width: 500px;
-  height: 300px;
-  margin: 100px 10px 0 50px;
-}
-.c-lesson__img2{
-  width: 500px;
-  height: 300px;
-  margin: 100px 0px 0 -100px;
-}
-@media screen and (max-width: 750px) {
-  .c-lesson__img1,
-  .c-lesson__img2 {
-  width: 260px;
-  height: 180px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .c-lesson__img1 {
-  margin: 150px 0 0px 80px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-lesson__img1 {
-  margin: initial;
-  margin: 30px 0 -20px 50px;
-  }
-}
-@media screen and (max-width: 750px) {
-  .c-lesson__img2 {
-  margin: 100px 30px 0 -20px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-lesson__img2 {
-  display:none;
-  }
-}
-.c-button__contact {
-  float:right;
-  margin-right: 200px;
-  background-color: #ffbd80;
-  color: #fff;
-  font-size:18px;
-  width: 100px;
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-}
-@media screen and (max-width: 750px) {
-.c-button__contact {
-   font-size: 16px;
-   width: 80px;
-   height: 30px;
-   margin: 0 110px 100px 0;
-  }
-}
-.c-lesson__badge {
+/* badge */
+.c-badge {
   margin: 0 20px;
   padding: 10px 10px;
   color: black;
   font-size: 16px;
   vertical-align: middle;
-  border-radius: 10px;
-  }
-@media screen and (max-width: 750px) {
-.c-lesson__badge {
-  font-size: 14px;
- }
-}
-@media screen and (max-width: 414px) {
-.c-lesson__badge {
-  font-size: 10px;
-  margin: 0 5px 0 20px;
- }
-}
-.c-badge__blue {
-  background: #7acee6;
-}
-.c-badge__pink {
-  background: #fac3ea;
-}
-.c-badge__orange {
-  background: #f2af29;
-}
-.c-badge__skyblue {
-  background: #b4f6fa;
-}
-.c-badge__yellow {
-  background: #fcfa53;
-}
-.c-badge__lightorange {
-  background: #fcb756;
-}
-.c-badge__lightgreen {
-  background: #7efa6b;
-}
+  border-radius: 10px; }
+  @media screen and (max-width: 750px) {
+    .c-badge {
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .c-badge {
+      font-size: 10px;
+      margin: 0 5px 0 20px; } }
+
+/* button */
 .c-button__SNS {
   width: 33px;
   height: 33px;
-}
-.c-button__Instagram {
-  margin-right: 50px;
-}
-/* utilitiy */
+  padding: 20px; }
 
-/* ================================ハンバーガーメニュー ========================*/
+.c-button__SNS:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s; }
 
-.drawer_hidden {
- display: none;
-}
-/* ハンバーガーメニュー表示非表示 */
-.nav {
- display:none;
-}
-@media screen and (max-width: 750px) {
-.nav {
- display:initial;
-  }
-}
-/* 設置スペース */
-.drawer_open {
- margin-left: -150px;
- margin-top: 30px;
- display: flex;
- height: 60px;
- width: 60px;
- justify-content: center;
- align-items: center;
- position: relative;
- z-index: 100;
- cursor: pointer;
-}
-@media screen and (max-width: 750px) {
-.drawer_open {
-  width: 100%;
-  }
-}
-/* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
- content: '';
- display: block;
- height: 3px;
- width: 30px;
- border-radius: 3px;
- background: #333;
- transition: 0.5s;
- position: absolute;
-}
+.c-button__submit {
+  float: right;
+  margin-right: 200px;
+  background-color: #ffbd80;
+  color: #fff;
+  font-size: 18px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  transition: all .3s ease-out; }
+  @media screen and (max-width: 750px) {
+    .c-button__submit {
+      font-size: 16px;
+      width: 80px;
+      height: 30px;
+      margin: -15px 0 0 110px; } }
 
-/* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
- bottom: 8px;
- margin-left: 8px;
-}
-/* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
- top: 8px;
- margin-left: 8px;
-}
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
- background: rgba(255, 255, 255, 0);
-}
-/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
- bottom: 0;
- transform: rotate(45deg);
-}
-#drawer_input:checked ~ .drawer_open span::after {
- top: 0;
- transform: rotate(-45deg);
-}
-/* メニューのデザイン*/
-.nav_content {
- width: 100%;
- height: 100%;
- position: fixed;
- top: 0;
- left: 100%;
- z-index: 99;
- background: orange;
- transition: .5s;
- text-align: center;
- line-height: 60px;
- opacity: 95%;
-}
-
-/* メニュー黒ポチを消す */
-.nav_list {
- width:40%;
- font-size: 20px;
- margin-top: 80px;
- list-style: none;
- font-family: 'Amatic SC', cursive;
-}
-@media screen and (max-width: 750px) {
-.nav_list {
-  font-size: 14px;
-  }
-}
-/* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
- left: 60%;/* メニューを画面に入れる */
-}
-
-/*========================================== アニメーションの適応 =============================================*/
-.c-catch a{
-  transition: all .3s ease-out;
-}
-.c-catch a:hover {
-  transform: translateX(10px) translateY(-10px);
-  color: white;
-  background: navy;
-  padding: 5px 20px;
-  border-radius: 20px;
-  font-size:16px;
-}
-
-.l-mainnav a{
-  transition: all .3s ease-out;
-}
-.l-mainnav a:hover {
-  transform: translateY(10px);
-  background: orange;
-  color: white;
-  padding: 15px;
-  border-radius: 20px;
-}
-.c-button__contact{
-  transition: all .3s ease-out;
-}
-.c-button__contact:hover{
+.c-button__submit:hover {
   transform: translateX(5px) translateY(-5px);
   color: #000;
-  font-size: 19px;
-}
-.l-headernav a {
+  font-size: 18px; }
+
+/* catchbutton */
+.c-catch {
+  margin-top: 40px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media screen and (max-width: 750px) {
+    .c-catch {
+      font-size: 12px; } }
+  .c-catch::before {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+    margin-right: 1em; }
+  .c-catch a {
+    transition: all .3s ease-out; }
+  .c-catch a:hover {
+    transform: translateX(10px) translateY(-10px);
+    color: white;
+    background: navy;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 16px; }
+
+/* newicon */
+.c-newicon {
+  position: relative;
+  margin-top: -15px;
+  background: #FDF5E6; }
+  .c-newicon::before {
+    content: "NEW";
+    background-color: orange;
+    padding: 5px 25px; }
+
+/* title */
+.c-title {
+  margin-bottom: 30px;
+  line-height: 30px;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: left; }
+  @media screen and (max-width: 750px) {
+    .c-title {
+      display: none; } }
+  .c-title::before {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+    margin-right: 1em;
+    margin-left: -20px; }
+
+/*========================================
+  about.scss
+========================================*/
+.p-about {
+  display: flex;
+  justify-content: center;
+  margin: 50px 50px 0 50px; }
+  @media screen and (max-width: 414px) {
+    .p-about {
+      margin: 50px 20px; } }
+  .p-about__title {
+    text-align: center;
+    font-size: 25px;
+    font-family: YuMincho; }
+    @media screen and (max-width: 750px) {
+      .p-about__title {
+        font-size: 20px;
+        margin-top: 30px;
+        text-align: center; } }
+  .p-about__nav {
+    writing-mode: vertical-rl;
+    line-height: 45px;
+    font-family: Yumincho;
+    font-size: 20px;
+    letter-spacing: 7px; }
+    @media screen and (max-width: 750px) {
+      .p-about__nav {
+        display: none; } }
+  .p-about__nav a {
+    transition: all .3s ease-out; }
+  .p-about__nav a:hover {
+    transform: translateY(10px);
+    background: orange;
+    color: white;
+    padding: 15px;
+    border-radius: 20px; }
+  .p-about__img {
+    list-style: none;
+    position: relative;
+    width: 650px;
+    height: 410px;
+    overflow: hidden;
+    margin: 0 -100px 30px 50px;
+    transform: scale(1.05); }
+    @media screen and (max-width: 750px) {
+      .p-about__img {
+        margin: initial; } }
+    @media screen and (max-width: 414px) {
+      .p-about__img {
+        height: 300px; } }
+    .p-about__img img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 4s linear transform .4s;
+      object-fit: cover; }
+    .p-about__img .zoom {
+      transform: scale(1.05); }
+  .p-about__contents {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 45px; }
+    @media screen and (max-width: 750px) {
+      .p-about__contents {
+        width: 90%;
+        font-size: 14px; } }
+    @media screen and (max-width: 414px) {
+      .p-about__contents {
+        display: initial;
+        text-align: center; } }
+  .p-about__explain > h2,
+  .p-about__concept > h3 {
+    font-weight: bold;
+    text-align: center; }
+
+@media screen and (max-width: 750px) {
+  .p-about__concept {
+    width: 57%; } }
+
+@media screen and (max-width: 414px) {
+  .p-about__concept {
+    width: 100%;
+    margin: 50px 0 50px 15px;
+    text-align: left; } }
+
+/*========================================
+contact.scss
+========================================*/
+.p-contact {
+  margin: 0 auto; }
+  @media screen and (max-width: 750px) {
+    .p-contact {
+      width: 100%; } }
+  .p-contact > h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid;
+    width: 60%; }
+    @media screen and (max-width: 414px) {
+      .p-contact > h2 {
+        font-size: 14px; } }
+  .p-contact__img {
+    text-align: center; }
+  .p-contact__img > img {
+    width: 800px;
+    height: 400px; }
+    @media screen and (max-width: 750px) {
+      .p-contact__img > img {
+        width: 90%;
+        height: 350px; } }
+    @media screen and (max-width: 414px) {
+      .p-contact__img > img {
+        height: 250px;
+        margin-top: 30px; } }
+  .p-contact__form {
+    width: 80%;
+    margin: 0 auto; }
+  .p-contact__input {
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    height: 50px;
+    width: 60%;
+    border: 3px solid #f6f5f4;
+    border-radius: 4px;
+    outline: none; }
+    @media screen and (max-width: 750px) {
+      .p-contact__input {
+        font-size: 12px;
+        width: 80%; } }
+  .p-contact__textarea {
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    height: 150px;
+    width: 60%;
+    border: 3px solid #f6f5f4;
+    border-radius: 4px;
+    outline: none; }
+    @media screen and (max-width: 750px) {
+      .p-contact__textarea {
+        font-size: 12px;
+        width: 80%; } }
+
+/*========================================
+  footer.scss
+========================================*/
+.p-footer__nav {
+  margin-left: 100px;
+  line-height: 35px; }
+  @media screen and (max-width: 750px) {
+    .p-footer__nav {
+      display: none; } }
+
+.p-footer__copyright {
+  margin-right: 100px; }
+  @media screen and (max-width: 750px) {
+    .p-footer__copyright {
+      margin: -30px 70px 20px 0; } }
+  @media screen and (max-width: 414px) {
+    .p-footer__copyright {
+      font-size: 12px;
+      margin: 30px 25px 20px  0; } }
+
+/*========================================
+  header.scss
+========================================*/
+.p-header__logo {
+  width: 150px;
+  height: 150px;
+  margin: 50px 0 0 50px;
+  border-radius: 100px; }
+  @media screen and (max-width: 750px) {
+    .p-header__logo {
+      margin: 50px 0 0 0px; } }
+  @media screen and (max-width: 414px) {
+    .p-header__logo {
+      margin: 50px 0 0 30px;
+      width: 100px;
+      height: auto; } }
+
+.p-header__lang {
+  font-size: 14px;
+  text-align: right;
+  margin: 160px 110px 0 0; }
+  @media screen and (max-width: 750px) {
+    .p-header__lang {
+      margin: 130px 0 0 100px; } }
+  @media screen and (max-width: 414px) {
+    .p-header__lang {
+      font-size: 12px;
+      margin: 140px 0 0 0; } }
+
+.p-header__nav {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 110px; }
+  @media screen and (max-width: 750px) {
+    .p-header__nav {
+      display: none; } }
+
+.p-header__nav a {
   position: relative;
   display: inline-block;
-  text-decoration: none;
-}
-.l-headernav a:hover {
+  text-decoration: none; }
+
+.p-header__nav a:hover {
   transition: all .3s ease-out;
   color: navy;
   font-weight: bold;
-  font-size: 18px;
-}
-.l-headernav a::after {
+  font-size: 18px; }
+
+.p-header__nav::after {
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -1239,90 +439,590 @@ main {
   background: #000000;
   transform: scale(0, 1);
   transform-origin: left top;
-  transition: transform .3s;
-}
-.l-headernav a:hover::after {
-  transform: scale(1, 1);
-}
-.c-recipe__img:hover, .c-info__img:hover, .c-hobbyimg:hover {
- box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
- transform: translateY(-3px);
- transition-duration: 0.5s;
-}
+  transition: transform .3s; }
 
-.c-recipedetail__img:hover {
- transform: scale(1.3);
- transition-duration: 0.5s;
-}
+.p-header__nav a:hover::after {
+  transform: scale(1, 1); }
 
-.c-button__SNS:hover {
-  transform: scale(1.2);
-  transition-duration: 0.5s;
-}
+/*========================================
+indexinfo.scss
+========================================*/
+.p-indexinfo__contents {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  width: 60%;
+  border-bottom: 2px dashed #ffbd80;
+  margin: 40px auto; }
+  @media screen and (max-width: 750px) {
+    .p-indexinfo__contents {
+      font-size: 14px;
+      width: 90%;
+      margin: 0 0 0px 40px; } }
+  @media screen and (max-width: 414px) {
+    .p-indexinfo__contents {
+      margin: 0 0 0px 20px; } }
+
+.p-indexinfo__img {
+  width: 310px;
+  height: 120px;
+  margin-top: -30px;
+  border-radius: 10%; }
+  @media screen and (max-width: 750px) {
+    .p-indexinfo__img {
+      width: 260px;
+      height: 100px;
+      margin-top: 10px; } }
+  @media screen and (max-width: 750px) and (max-width: 414px) {
+    .p-indexinfo__img {
+      display: none; } }
+
+.p-indexinfo__img:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+  transition-duration: 0.5s; }
+
+/*========================================
+indexrecipe.scss
+========================================*/
+.p-indexrecipe__contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.p-indexrecipe__img {
+  width: 350px;
+  height: 250px;
+  margin: 20px 30px 50px 40px;
+  border-radius: 10%; }
+  @media screen and (max-width: 750px) {
+    .p-indexrecipe__img {
+      width: 300px;
+      margin: 20px; } }
+
+.p-indexrecipe__img:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+  transition-duration: 0.5s; }
+
+/*========================================
+lesson.scss
+========================================*/
+.p-lesson__index {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto; }
+  @media screen and (max-width: 414px) {
+    .p-lesson__index {
+      display: initial;
+      width: 100%; } }
+
+.p-lesson__index-img {
+  width: 600px;
+  height: 350px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__index-img {
+      width: 65%;
+      height: auto; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__index-img {
+      margin: initial;
+      width: 88%;
+      height: 250px;
+      margin-left: 24px;
+      margin-top: 30px; } }
+
+.p-lesson__index-list {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 100px 0 0 25px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__index-list {
+      font-size: 16px;
+      line-height: 20px;
+      width: 145px; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__index-list {
+      margin: initial;
+      margin-top: 30px;
+      width: initial;
+      text-align: center; } }
+
+.p-lesson__contents {
+  width: 90%;
+  display: flex;
+  justify-content: center; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__contents {
+      width: 97%; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__contents {
+      display: initial; } }
+
+.p-lesson__about-img {
+  width: 500px;
+  height: 300px;
+  margin: 100px 10px 0 50px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__about-img {
+      width: 290px;
+      height: 210px;
+      margin: 200px 0 0 25px; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__about-img {
+      margin: 30px 0 -20px 50px; } }
+
+.p-lesson__schedule-img {
+  width: 450px;
+  height: 300px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__schedule-img {
+      width: 300px;
+      height: 210px;
+      margin: 100px 55px 0 -50px; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__schedule-img {
+      display: none; } }
+
+.p-lesson__about, .p-lesson__schedule {
+  line-height: 40px;
+  font-size: 16px;
+  font-family: YuMincho;
+  margin: 0 30px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__about, .p-lesson__schedule {
+      margin: initial;
+      margin-right: 20px; } }
+  @media screen and (max-width: 414px) {
+    .p-lesson__about, .p-lesson__schedule {
+      width: 90%;
+      margin: 25px; } }
+
+.p-lesson__schedule {
+  margin: 40px; }
+  @media screen and (max-width: 414px) {
+    .p-lesson__schedule {
+      margin: 20px; } }
+
+.p-lesson__about > h1, .p-lesson__about > h2,
+.p-lesson__schedule > h1, .p-lesson__schedule > h2 {
+  padding: 10px;
+  font-size: 20px; }
+
+@media screen and (max-width: 750px) {
+  .p-lesson__about > h2 {
+    font-size: 16px;
+    text-align: center; } }
+
+@media screen and (max-width: 750px) {
+  .p-lesson__schedule > h2 {
+    font-size: 16px; } }
+
+@media screen and (max-width: 414px) {
+  .p-lesson__schedule > h2 {
+    font-size: 16px;
+    text-align: center; } }
+
+@media screen and (max-width: 414px) {
+  .p-lesson__schedule > p {
+    text-align: center; } }
+
+.p-lesson__next {
+  margin: -20px 0 20px -30px; }
+  @media screen and (max-width: 750px) {
+    .p-lesson__next {
+      font-size: 12px;
+      width: 400px; } }
+
+.p-lesson__next > p {
+  width: 360px;
+  text-align: center; }
+
+/*========================================
+profile.scss
+========================================*/
+.p-profile {
+  display: flex;
+  justify-content: space-around;
+  width: 93%; }
+  @media screen and (max-width: 414px) {
+    .p-profile {
+      display: initial;
+      text-align: center; } }
+  .p-profile__img {
+    width: 600px;
+    height: 350px;
+    margin: 0 0 80px 220px; }
+    @media screen and (max-width: 750px) {
+      .p-profile__img {
+        width: 400px;
+        height: 250px;
+        margin: 50px 0 0 20px; } }
+    @media screen and (max-width: 414px) {
+      .p-profile__img {
+        width: 90%;
+        margin: 30px 0; } }
+  .p-profile__name > p {
+    font-size: 14px;
+    text-align: center; }
+  .p-profile__name > h1 {
+    font-size: 25px;
+    text-align: center; }
+    @media screen and (max-width: 750px) {
+      .p-profile__name > h1 {
+        font-size: 20px; } }
+  .p-profile__skillandlicense {
+    line-height: 35px; }
+    @media screen and (max-width: 750px) {
+      .p-profile__skillandlicense {
+        font-size: 12px; } }
+  .p-profile__license > h2,
+  .p-profile__skill > h3 {
+    text-align: center; }
+  .p-profile__license > ul,
+  .p-profile__skill > ul {
+    margin-left: 60px; }
+    @media screen and (max-width: 750px) {
+      .p-profile__license > ul,
+      .p-profile__skill > ul {
+        margin: initial;
+        line-height: 25px;
+        text-align: center; } }
+  .p-profile__license {
+    margin: 30px 0 30px 0; }
+    @media screen and (max-width: 750px) {
+      .p-profile__license {
+        margin: initial; } }
+  @media screen and (max-width: 414px) {
+    .p-profile__contents {
+      margin: 30px 0; } }
+  .p-profile__contents > p {
+    border-bottom: 1px solid;
+    line-height: 50px;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto; }
+    @media screen and (max-width: 750px) {
+      .p-profile__contents > p {
+        width: 87%; } }
+    @media screen and (max-width: 414px) {
+      .p-profile__contents > p {
+        font-size: 14px;
+        line-height: 30px;
+        margin: 30px auto; } }
+  .p-profile__hobbyex {
+    margin-top: -30px; }
+  .p-profile__hobby, .p-profile__hobbyex {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 50px 50px 30px; }
+  @media screen and (max-width: 750px) {
+    .p-profile__hobby {
+      margin: 20px 20px 0 20px; } }
+  @media screen and (max-width: 414px) {
+    .p-profile__hobby {
+      display: initial; } }
+  .p-profile__hobbyimg {
+    width: 400px;
+    height: 300px; }
+    @media screen and (max-width: 750px) {
+      .p-profile__hobbyimg {
+        width: 210px;
+        height: 150px;
+        margin: 0 10px; } }
+    @media screen and (max-width: 414px) {
+      .p-profile__hobbyimg {
+        width: 280px;
+        height: 180px;
+        margin: 20px 45px; } }
+  .p-profile__hobbyimg:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+    transition-duration: 0.5s; }
+  @media screen and (max-width: 414px) {
+    .p-profile .p-profile__hobbyex {
+      display: none; } }
+
+/*========================================
+recipe.scss
+========================================*/
+.p-recipe__contents {
+  display: flex;
+  justify-content: space-around;
+  line-height: 35px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__contents {
+      margin: 30px 30px 0 30px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipe__contents {
+      display: initial; } }
+
+@media screen and (max-width: 750px) {
+  .p-recipe__contents > h3,
+  .p-recipe__contents > p {
+    font-size: 14px;
+    line-height: 30px; } }
+
+.p-recipe__img {
+  width: 380px;
+  height: 240px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__img {
+      width: 340px;
+      height: 210px;
+      margin: 15px; } }
+
+.p-recipe__img:hover {
+  transform: scale(1.3);
+  transition-duration: 0.5s; }
+
+.p-recipe__materialandnutrition {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-right: 130px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__materialandnutrition {
+      margin: initial; } }
+  @media screen and (max-width: 414px) {
+    .p-recipe__materialandnutrition {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin-left: 40px; } }
+
+.p-recipe__material {
+  margin-right: 50px; }
+
+.p-recipe__point {
+  width: 35%;
+  margin-left: 50px; }
+
+@media screen and (max-width: 750px) {
+  .p-recipe__method {
+    width: 43%; } }
+
+@media screen and (max-width: 414px) {
+  .p-recipe__method {
+    width: 51%;
+    font-size: 12px; } }
+
+@media screen and (max-width: 750px) {
+  .p-recipe__point {
+    margin: initial;
+    width: 40%; } }
+
+@media screen and (max-width: 414px) {
+  .p-recipe__point > p {
+    font-size: 12px; } }
+
+.p-recipe__method > h5 {
+  font-size: 20px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__method > h5 {
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipe__method > h5 {
+      font-size: 14px;
+      text-align: center; } }
+
+.p-recipe__point > h6 {
+  font-size: 20px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__point > h6 {
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipe__point > h6 {
+      font-size: 14px;
+      text-align: center; } }
+
+.p-recipe__methodandpoint {
+  display: flex;
+  justify-content: space-around;
+  line-height: 40px;
+  margin: 20px 150px; }
+  @media screen and (max-width: 750px) {
+    .p-recipe__methodandpoint {
+      margin: initial;
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipe__methodandpoint {
+      width: 86%;
+      margin: -30px 30px 30px 30px; } }
+
+@media screen and (max-width: 750px) {
+  .p-recipe__method > li {
+    font-size: 14px;
+    line-height: 30px; } }
+
+/*========================================
+recipeex.scss
+========================================*/
+.p-recipeex {
+  line-height: 40px;
+  margin: -100px 0 100px 0; }
+  @media screen and (max-width: 750px) {
+    .p-recipeex {
+      margin-top: 40px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipeex {
+      margin: initial; } }
+
+.p-recipeex > li {
+  border-bottom: 1px solid;
+  width: 600px;
+  margin: 0 auto; }
+  @media screen and (max-width: 750px) {
+    .p-recipeex > li {
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .p-recipeex > li {
+      width: 95%;
+      font-size: 10px; } }
+
+/*========================================
+  SNS.scss
+========================================*/
+.p-SNS__button {
+  margin: 40px 20px 0 20px; }
+  @media screen and (max-width: 750px) {
+    .p-SNS__button {
+      margin: -60px 0 0 100px; } }
+  @media screen and (max-width: 414px) {
+    .p-SNS__button {
+      margin: 0 0 20px 40px; } }
+
+/*========================================
+badge.scss
+========================================*/
+.u-badge {
+  /*1. pink */
+  /*2. blue */
+  /*3. orange */
+  /*4. skyblue */
+  /*5. lightorange */
+  /*6. lightgreen */
+  /*7. yellow */ }
+  .u-badge__color1 {
+    background: #fac3ea; }
+  .u-badge__color2 {
+    background: #7acee6; }
+  .u-badge__color3 {
+    background: #f2af29; }
+  .u-badge__color4 {
+    background: #b4f6fa; }
+  .u-badge__color5 {
+    background: #fcb756; }
+  .u-badge__color6 {
+    background: #7efa6b; }
+  .u-badge__color7 {
+    background: #fcfa53; }
 
 /* ===============================画面アニメーション処理 =========================*/
-.u-fade-type-up{
-    transform: translateY(50px);
-    opacity: 0;
-}
+.u-fade-type-up {
+  transform: translateY(50px);
+  opacity: 0; }
 
 /* トリガー発火でis-activeを付与 */
-.u-fade-type-up.is-active{
-    transition: .6s;
-    transform: translateY(0);
-    opacity: 1;
-}
+.u-fade-type-up.is-active {
+  transition: .6s;
+  transform: translateY(0);
+  opacity: 1; }
 
-/*========================================== js＋画像スライドの適応 =============================================*/
-.slide-items {
-  list-style: none;
-  position: relative;
-  width: 650px;
-  height: 410px;
-  overflow: hidden;
-  margin: 0 -100px 0 50px;
-}
+.drawer_hidden {
+  display: none; }
+
+/* ハンバーガーメニュー表示非表示 */
+.nav {
+  display: none; }
+
 @media screen and (max-width: 750px) {
-  .slide-items  {
-  width: 100%;
-  margin: initial;
- }
-}
+  .nav {
+    display: initial; } }
+
+/* 設置スペース */
+.drawer_open {
+  margin: 30px 0 0 -150px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer; }
+
+@media screen and (max-width: 750px) {
+  .drawer_open {
+    margin: 65px 0 0 -110px; } }
+
 @media screen and (max-width: 414px) {
-  .slide-items  {
-  width: 100%;
-  height: 300px;
- }
-}
-.slide-items img {
-  position: absolute;
+  .drawer_open {
+    margin: 65px 0 0 -80px; } }
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute; }
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+  margin-left: 8px; }
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+  margin-left: 8px; }
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0); }
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg); }
+
+#drawer_input:checked ~ .drawer_open span::after {
   top: 0;
-  left: 0;
-  right: 0;
+  transform: rotate(-45deg); }
+
+/* メニューのデザイン*/
+.nav_content {
   width: 100%;
   height: 100%;
-  transition: 4s linear transform .4s;
-  object-fit: cover;
-}
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 99;
+  background: orange;
+  transition: .5s;
+  text-align: center;
+  line-height: 60px;
+  opacity: 95%; }
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  width: 40%;
+  font-size: 20px;
+  margin-top: 120px;
+  list-style: none;
+  font-family: 'Amatic SC', cursive; }
+
 @media screen and (max-width: 750px) {
-  .slide-items  {
-  width: 85%;
- }
-}
-.slide-items .zoom {
-  transform: scale(1.05);
-}
-/* =================================あしらい======================================== */
-/* pickuprexipeにNEWマーク */
-.c-newicon{
-    position: relative;
-    margin-top:-15px;
-    background: #FDF5E6;
+  .nav_list {
+    font-size: 14px; } }
 
-}
-
-.c-newicon::before{
-    content: "NEW";
-    background-color: orange;
-    padding:5px 25px;
-}
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 60%;
+  /* メニューを画面に入れる */ }

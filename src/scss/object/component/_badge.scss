@@ -1,0 +1,16 @@
+/* badge */
+.c-badge {
+  margin: 0 20px;
+  padding: 10px 10px;
+  color: black;
+  font-size: $font-size_default;
+  vertical-align: middle;
+  border-radius: 10px;
+@include mq(){
+  font-size: $font-size_m;
+ }
+@include mq($breakpoint:sm) {
+  font-size: $font-size_ss;
+  margin: 0 5px 0 20px;
+ }
+}

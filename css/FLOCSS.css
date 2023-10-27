@@ -61,32 +61,39 @@ header, main, footer,section {
 	margin: 0 auto;
 }
 /* ==========================layout=================== */
-/*========================================
-l-wrapper.scss  //600pxくらいで縦が崩れる？
-========================================*/
-.l-wrapper {
+.l-wrapper-1 {
   background-image: url("../img/all_bg_img01.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 750px) {
-.l-wrapper {
+.l-wrapper-1 {
   background-size: 100% ;
   }
 }
 @media screen and (max-width: 414px) {
-.l-wrapper {
+.l-wrapper-1 {
   background-size: 100% 100%;
   }
 }
-.l-wrapper2 {
+.l-wrapper-2 {
   background-image: url("../img/all_bg_img01.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 750px) {
-.l-wrapper2 {
+.l-wrapper-2 {
   background-size: 100%;
+  }
+}
+.l-wrapper-3 {
+  background-image: url("../img/all_bg_img01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 540px) {
+.l-wrapper-3 {
+  background-size: 100% 100%;
   }
 }
 /*========================================
@@ -142,6 +149,7 @@ l-wrapper.scss  //600pxくらいで縦が崩れる？
   height: 50px;
   border: none;
   border-radius: 5px;
+	transition: all .3s ease-out;
 }
 @media screen and (max-width: 750px) {
 .c-button__submit{
@@ -150,9 +158,6 @@ l-wrapper.scss  //600pxくらいで縦が崩れる？
    height: 30px;
    margin: -15px 0 0 110px;
   }
-}
-.c-button__submit{
-  transition: all .3s ease-out;
 }
 .c-button__submit:hover{
   transform: translateX(5px) translateY(-5px);
@@ -172,16 +177,8 @@ l-wrapper.scss  //600pxくらいで縦が崩れる？
   border-top: 1px solid;
   content: "";
   width: 3em;
-}
-.c-title:before {
-  margin-right: 1em;
-  margin-left: -20px;
-}
-@media screen and (max-width: 750px) {
-.c-title {
-  font-size: 16px;
-  margin-left: 0;
-  }
+	margin-right: 1em;
+	margin-left: -20px;
 }
 @media screen and (max-width: 750px) {
 .c-title {
@@ -206,9 +203,7 @@ l-wrapper.scss  //600pxくらいで縦が崩れる？
   border-top: 1px solid;
   content: "";
   width: 3em;
-}
-.c-catch:before {
-  margin-right: 1em;
+	margin-right: 1em;
 }
 .c-catch a{
   transition: all .3s ease-out;
@@ -355,7 +350,9 @@ l-wrapper.scss  //600pxくらいで縦が崩れる？
   margin: 30px 25px 20px  0;
   }
 }
-/* SNS */
+/*========================================
+  SNS.scss
+========================================*/
 .p-SNS__button {
   margin:40px 20px 0 20px;
 }
@@ -767,9 +764,9 @@ recipe.scss
 }
 @media screen and (max-width: 750px) {
 .p-recipe__img {
-  width: 340px;
-  height: 220px;
-  margin: auto 30px;
+	width: 340px;
+  height: 210px;
+  margin: 30px;
   }
 }
 .p-recipe__materialandnutrition {
@@ -919,8 +916,8 @@ lessonindex.scss
 }
 @media screen and (max-width: 750px) {
 .p-lesson__index-img  {
-  width: 480px;
-  height: 280px;
+  width: 80%;
+  height: auto;
   }
 }
 @media screen and (max-width: 414px) {
@@ -968,26 +965,16 @@ lessonindex.scss
   display: initial;
   }
 }
-.p-lesson__about-img{
+..p-lesson__about-img{
   width: 500px;
   height: 300px;
   margin: 100px 10px 0 50px;
 }
-.p-lesson__schedule-img{
-  width: 500px;
-  height: 300px;
-  margin: 100px 0px 0 -100px;
-}
-@media screen and (max-width: 750px) {
-  .p-lesson__about-img,
-  .p-lesson__schedule-img {
-  width: 300px;
-  height: 180px;
-  }
-}
 @media screen and (max-width: 750px) {
   .p-lesson__about-img {
-  margin: 150px 0 0px 80px;
+    width: 290px;
+    height: 210px;
+    margin: 200px 0 0 25px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -995,9 +982,17 @@ lessonindex.scss
   margin: 30px 0 -20px 50px;
   }
 }
+.p-lesson__schedule-img{
+  width: 500px;
+  height: 300px;
+  margin: 100px 0px 0 -100px;
+}
+
 @media screen and (max-width: 750px) {
   .p-lesson__schedule-img{
-  margin: 100px 55px 0 -20px;
+    width: 300px;
+    height: 210px;
+  margin: 100px 55px 0 -50px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -1026,7 +1021,6 @@ lessonindex.scss
    margin:25px;
   }
 }
-
 .p-lesson__about > h1,h2,
 .p-lesson__schedule > h1,h2 {
 	padding: 10px;
@@ -1148,28 +1142,34 @@ contact.scss
 /*========================================
 badge.scss
 ========================================*/
-.u-badge__blue {
-  background: #7acee6;
-}
-.u-badge__pink {
+/* pink */
+.u-badge__color1 {
   background: #fac3ea;
 }
-.u-badge__orange {
+/* blue */
+.u-badge__color2 {
+  background: #7acee6;
+}
+/* orange */
+.u-badge__color3 {
   background: #f2af29;
 }
-.u-badge__skyblue {
+/* skyblue */
+.u-badge__color4 {
   background: #b4f6fa;
 }
-.u-badge__yellow {
-  background: #fcfa53;
-}
-.u-badge__lightorange {
+/* lightorange */
+.u-badge__color5 {
   background: #fcb756;
 }
-.u-badge__lightgreen {
+/* lightgreen */
+.u-badge__color6 {
   background: #7efa6b;
 }
-
+/* yellow */
+.u-badge__color7 {
+  background: #fcfa53;
+}
 /* ===============================画面アニメーション処理 =========================*/
 .u-fade-type-up{
     transform: translateY(50px);

@@ -1,0 +1,67 @@
+
+/*========================================
+contact.scss
+========================================*/
+.p-contact {
+  margin: 0 auto;
+ @include mq(){
+  width: 100%;
+}
+  & > h2 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: $font-size_xl;
+  border-bottom: 1px solid;
+  width: 60%;
+  @include mq($breakpoint:sm) {
+     font-size: $font-size_m;
+  }
+}
+  &__img {
+  text-align: center;
+}
+  &__img > img {
+  width: 800px;
+  height: 400px;
+@include mq()  {
+  width: 90%;
+  height: 350px;
+}
+@include mq($breakpoint:sm) {
+    height: 250px;
+    margin-top: 30px;
+ }
+}
+&__form {
+  width: 80%;
+  margin: 0 auto;
+}
+&__input {
+  font-size: $font-size_default;
+  display: block;
+  margin: 20px auto;
+  height: 50px;
+  width: 60%;
+  border: 3px solid #f6f5f4;
+  border-radius: 4px;
+  outline: none;
+  @include mq(){
+     font-size: $font-size_s;
+     width: 80%;
+ }
+}
+&__textarea {
+  font-size: $font-size_default;
+  display: block;
+  margin: 20px auto;
+  height: 150px;
+  width: 60%;
+  border: 3px solid #f6f5f4;
+  border-radius: 4px;
+  outline: none;
+  @include mq(){
+     font-size: 12px;
+     width: 80%;
+    }
+  }
+}

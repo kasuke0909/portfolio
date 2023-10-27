@@ -1,0 +1,11 @@
+/* newicon */
+.c-newicon{
+    position: relative;
+    margin-top:-15px;
+    background: #FDF5E6;
+&::before{
+    content: "NEW";
+    background-color: orange;
+    padding:5px 25px;
+ }
+}

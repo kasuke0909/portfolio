@@ -1,0 +1,27 @@
+// 変数
+$site-width: 1366px;
+$font-size_ss: 10px;
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 18px;
+$font-size_xl: 20px;
+$font-size_xxl: 25px;
+
+//マップ変数
+$breakpoints: (
+  'sm': 'screen and (max-width: 414px)',
+  'md': 'screen and (max-width: 750px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+//import
+@import 'foundation/index';
+@import 'layout/index';
+@import 'object/component/index';
+@import 'object/project/index';
+@import 'object/utility/index';

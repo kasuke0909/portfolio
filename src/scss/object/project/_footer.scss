@@ -1,0 +1,22 @@
+/*========================================
+  footer.scss
+========================================*/
+.p-footer {
+&__nav {
+  margin-left: 100px;
+  line-height: 35px;
+  @include mq(){
+  display: none;
+ }
+}
+&__copyright {
+  margin-right: 100px;
+  @include mq(){
+  margin: -30px 70px 20px 0
+    }
+  @include mq($breakpoint:sm) {
+  	font-size: $font-size_s;
+    margin: 30px 25px 20px  0;
+    }
+  }
+}

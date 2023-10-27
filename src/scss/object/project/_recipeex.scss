@@ -1,0 +1,26 @@
+
+/*========================================
+recipeex.scss
+========================================*/
+.p-recipeex{
+  line-height: 40px;
+  margin: -100px 0 100px 0;
+  @include mq(){
+    margin-top: 40px;
+  }
+  @include mq($breakpoint:sm) {
+    margin: initial;
+  }
+}
+.p-recipeex > li {
+  border-bottom: 1px solid;
+  width: 600px;
+  margin: 0 auto;
+@include mq(){
+  font-size: $font-size_m;
+  }
+@include mq($breakpoint:sm) {
+  width: 95%;
+  font-size: $font-size_ss;
+  }
+}

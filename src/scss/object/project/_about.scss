@@ -1,0 +1,101 @@
+
+/*========================================
+  about.scss
+========================================*/
+.p-about {
+  display: flex;
+  justify-content: center;
+	margin: 50px 50px 0 50px;
+  @include mq($breakpoint:sm) {
+  	margin: 50px 20px;
+  }
+&__title {
+  text-align: center;
+  font-size: $font-size_xxl;
+  font-family: YuMincho;
+  @include mq(){
+  	font-size: $font-size_xl;
+    margin-top: 30px;
+    text-align: center;
+    }
+  }
+&__nav {
+  writing-mode: vertical-rl;
+  line-height: 45px;
+  font-family: Yumincho;
+  font-size: $font-size_xl;
+  letter-spacing: 7px;
+  @include mq(){
+    display: none;
+    }
+  }
+&__nav a {
+  transition: all .3s ease-out;
+  }
+&__nav a:hover {
+  transform: translateY(10px);
+  background: orange;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+ }
+&__img {
+  list-style: none;
+  position: relative;
+  width: 650px;
+  height: 410px;
+  overflow: hidden;
+  margin: 0 -100px 30px 50px;
+  transform: scale(1.05);
+  @include mq(){
+    margin: initial;
+   }
+   @include mq($breakpoint:sm) {
+     height: 300px;
+  }
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 4s linear transform .4s;
+  object-fit: cover;
+ }
+.zoom {
+  transform: scale(1.05);
+ }
+}
+&__contents {
+  display: flex;
+  justify-content: space-around;
+	width: 80%;
+	margin: 20px auto;
+	font-size: $font-size_xl;
+	line-height: 45px;
+  @include mq(){
+    width: 90%;
+  	font-size: $font-size_m;
+   }
+  @include mq($breakpoint:sm) {
+  display: initial;
+  text-align: center;
+   }
+ }
+&__explain > h2,
+&__concept > h3 {
+  font-weight: bold;
+  text-align: center;
+  }
+ }
+
+@include mq(){
+.p-about__concept {
+	width: 57%;
+ }
+}
+@include mq($breakpoint:sm) {
+.p-about__concept {
+	width: 100%;
+	margin: 50px 0 50px 15px;
+	text-align: left;
+ }
+}

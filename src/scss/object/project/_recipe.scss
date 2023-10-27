@@ -1,0 +1,121 @@
+
+/*========================================
+recipe.scss
+========================================*/
+.p-recipe {
+  &__contents {
+  display: flex;
+  justify-content: space-around;
+  line-height: 35px;
+@include mq(){
+  margin: 30px 30px 0 30px;
+}
+@include mq($breakpoint:sm) {
+  display: initial;
+  }
+}
+@include mq(){
+&__contents > h3,
+&__contents > p{
+  font-size: $font-size_m;
+  line-height: 30px;
+  }
+}
+&__img {
+  width: 380px;
+  height: 240px;
+  @include mq(){
+  	width: 340px;
+    height: 210px;
+    margin: 15px;
+    }
+}
+&__img:hover {
+ transform: scale(1.3);
+ transition-duration: 0.5s;
+}
+&__materialandnutrition {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-right: 130px;
+@include mq(){
+  margin: initial;
+}
+@include mq($breakpoint:sm) {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-left: 40px;
+  }
+}
+&__material {
+  margin-right: 50px;
+}
+&__point {
+  width: 35%;
+  margin-left: 50px;
+}
+@include mq(){
+  &__method {
+    width: 43%;
+  }
+}
+@include mq($breakpoint:sm) {
+  &__method {
+    width: 51%;
+    font-size: $font-size_s;
+  }
+}
+@include mq(){
+  &__point {
+    margin:initial;
+    width: 40%;
+  }
+}
+@include mq($breakpoint:sm) {
+&__point > p{
+  font-size: $font-size_s;
+  }
+}
+&__method > h5{
+  font-size: $font-size_xl;
+  @include mq(){
+    font-size: $font-size_m;
+    }
+  @include mq($breakpoint:sm) {
+    font-size: $font-size_m;
+    text-align: center;
+  }
+}
+&__point > h6 {
+  font-size: $font-size_xl;
+@include mq(){
+    font-size: $font-size_m;
+  }
+@include mq($breakpoint:sm) {
+  font-size: $font-size_m;
+  text-align: center;
+  }
+}
+&__methodandpoint {
+  display: flex;
+  justify-content: space-around;
+  line-height: 40px;
+  margin: 20px 150px;
+@include mq(){
+  margin: initial;
+  font-size: $font-size_m;
+}
+@include mq($breakpoint:sm) {
+  width: 86%;
+  margin: -30px 30px 30px 30px;
+}
+}
+@include mq(){
+&__method  > li {
+  font-size: $font-size_m;
+  line-height: 30px;
+  }
+ }
+}

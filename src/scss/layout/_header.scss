@@ -1,0 +1,14 @@
+/*========================================
+  header.scss
+========================================*/
+.l-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+@include mq(){
+  width: 55%;
+}
+@include mq($breakpoint:sm) {
+  width: 30%;
+  }
+}

@@ -1,0 +1,126 @@
+/*========================================
+profile.scss
+========================================*/
+.p-profile {
+  display: flex;
+  justify-content: space-around;
+	width: 93%;
+@include mq($breakpoint:sm) {
+  display: initial;
+  text-align: center;
+ }
+&__img {
+  width: 600px;
+  height: 350px;
+  margin:0 0 80px 220px;
+@include mq(){
+  width: 400px;
+  height: 250px;
+  margin:50px 0 0 20px;
+  }
+@include mq($breakpoint:sm) {
+  width: 90%;
+  margin: 30px 0;
+  }
+}
+&__name > p {
+  font-size: $font-size_m;
+	text-align: center;
+}
+&__name > h1 {
+  font-size: $font-size_xxl;
+	text-align: center;
+@include mq(){
+  font-size: $font-size_xl;
+ }
+}
+&__skillandlicense {
+  line-height: 35px;
+@include mq(){
+  font-size: $font-size_s;
+ }
+}
+&__license > h2,
+&__skill > h3
+ {
+  text-align: center;
+}
+&__license > ul,
+&__skill > ul {
+  margin-left: 60px;
+@include mq(){
+		margin: initial;
+		line-height: 25px;
+		text-align: center;
+ }
+}
+&__license {
+  margin: 30px 0 30px 0;
+@include mq(){
+	  margin: initial;
+ }
+}
+@include mq($breakpoint:sm) {
+&__contents {
+  margin: 30px 0;
+ }
+}
+&__contents > p{
+  border-bottom: 1px solid;
+  line-height: 50px;
+  width: 50%;
+  text-align:left;
+  margin: 0 auto;
+@include mq(){
+  width: 87%;
+ }
+@include mq($breakpoint:sm) {
+  font-size: $font-size_m;
+  line-height: 30px;
+  margin: 30px auto;
+ }
+}
+&__hobbyex {
+  margin-top: -30px;
+}
+&__hobby,
+&__hobbyex{
+  display: flex;
+  justify-content: space-around;
+  margin:20px 50px 50px 30px;
+}
+@include mq(){
+&__hobby {
+  margin:20px 20px 0 20px;
+  }
+}
+@include mq($breakpoint:sm) {
+&__hobby {
+  display:initial;
+  }
+}
+&__hobbyimg {
+  width: 400px;
+  height: 300px;
+@include mq(){
+  width: 210px;
+  height: 150px;
+  margin: 0 10px;
+}
+@include mq($breakpoint:sm) {
+  width: 280px;
+  height: 180px;
+  margin: 20px 45px;
+  }
+ }
+&__hobbyimg:hover {
+ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+ transform: translateY(-3px);
+ transition-duration: 0.5s;
+}
+@include mq($breakpoint:sm) {
+.p-profile__hobbyex {
+  display: none
+  }
+ }
+}

@@ -1,0 +1,41 @@
+
+/*========================================
+indexinfo.scss
+========================================*/
+.p-indexinfo {
+&__contents {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  width: 60%;
+  border-bottom: 2px dashed #ffbd80;
+  margin: 40px auto;
+  @include mq(){
+    font-size: $font-size_m;
+    width: 90%;
+    margin: 0 0 0px 40px;
+    }
+  @include mq($breakpoint:sm) {
+    margin: 0 0 0px 20px;
+    }
+   }
+&__img {
+  width: 310px;
+  height: 120px;
+  margin-top: -30px;
+  border-radius: 10%;
+  @include mq(){
+  width: 260px;
+  height: 100px;
+  margin-top: 10px;
+  @include mq($breakpoint:sm) {
+    display: none;
+  }
+ }
+}
+&__img:hover {
+ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+ transform: translateY(-3px);
+ transition-duration: 0.5s;
+}
+}
